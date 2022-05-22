@@ -1,0 +1,105 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+.contain{
+    width:100vw;
+    height:100vh;
+    display: grid;
+    place-items:center;
+    position:relative;
+    background:linear-gradient(to bottom,black ,rgb(24, 24, 24));
+    overflow:hidden;
+}
+.keyboard{
+    width:95%;
+    height:65%;
+    border:10px double rgb(24, 24, 24);
+    position:absolute;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    padding:4vmin;
+    border-radius:4vmin;
+    transition:all 300ms linear;
+    box-shadow: 0px 0px 21px rgba(255, 255, 255, 0.365) ;
+    overflow: hidden;
+}
+
+.firstSlate,.secondSlate,.thirdSlate,.fourthSlate,
+.fifthSlate,.sixthSlate{
+    width:100%;
+    height:17%;
+    margin:4px;
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: justify;
+    place-items: center;
+    
+    
+}
+
+.slate > div{
+    background:linear-gradient(to bottom,rgb(41, 41, 41) ,black);
+    font-weight: 500;
+    padding:1vmin;
+    width:15vmin;
+    height:8vmin;
+    font-size:2vmin;
+    display: grid;
+    place-items:center;;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: capitalize;
+    margin:5px;
+    border-radius:1vmin;
+    box-shadow: 0px 0px 3px white inset,
+    0px 0px 2px white;
+    overflow:hidden;
+}
+
+
+@media only screen and (max-width:1080px) and (orientation:landscape){
+ .keyboard{
+     height:80%;
+     padding-top: 3vmin;
+     
+ }
+ .keyboard::before{
+     content: "";
+  
+ }
+ .slate > div{
+     font-size:2.4vmin;
+     
+ }
+ .message{
+     display: none;
+    transform: translateX(-150%);
+ }
+ #goal:hover{
+     background:white;
+     color:black;
+ }
+}
+
+@media only screen and (max-width:1080px) and (orientation:portrait) {
+   .keyboard{
+       display: none;
+   }
+   .message{
+       width:90%;
+       height:10%;
+       display: grid;
+       place-items:center;
+       background:white;
+       color:black;
+       font-size:4vmin;;
+       display:block;
+       text-align: center;
+       padding:5vmin;
+       border-radius:3vmin;
+   }
+}
